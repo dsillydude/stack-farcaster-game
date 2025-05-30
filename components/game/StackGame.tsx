@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useMiniappContext } from '@/hooks/useMiniappContext';
-
-
+import { useMiniAppContext } from '@/hooks/useMiniappContext';
 
 // Game constants
 const GAME_WIDTH = 400;
