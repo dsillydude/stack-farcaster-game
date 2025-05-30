@@ -1,24 +1,44 @@
-import { NextResponse } from "next/server";
-import { APP_URL } from "../../../lib/constants";
-
-export async function GET() {
-  const farcasterConfig = {
-    // TODO: Add account association
-    frame: {
-      version: "1",
-      name: "Monad Farcaster MiniApp Template",
-      iconUrl: `${APP_URL}/images/icon.png`,
-      homeUrl: `${APP_URL}`,
-      imageUrl: `${APP_URL}/images/feed.png`,
-      screenshotUrls: [],
-      tags: ["monad", "farcaster", "miniapp", "template"],
-      primaryCategory: "developer-tools",
-      buttonTitle: "Launch Template",
-      splashImageUrl: `${APP_URL}/images/splash.png`,
-      splashBackgroundColor: "#ffffff",
-      webhookUrl: `${APP_URL}/api/webhook`,
-    },
-  };
-
-  return NextResponse.json(farcasterConfig);
-}
+// Update the farcaster.json file with our Stack game information
+export const GET = async () => {
+  return new Response(
+    JSON.stringify({
+      // Required fields
+      version: 1,
+      frame: {
+        image: `${process.env.NEXT_PUBLIC_URL}/images/stack-game-embed.png`,
+        buttons: [
+          {
+            label: "Play Stack Game",
+            action: "post",
+          },
+        ],
+        post_url: `${process.env.NEXT_PUBLIC_URL}/api/frame`,
+      },
+      // Optional fields
+      image: {
+        aspect_ratio: "1.91:1",
+      },
+      // App metadata
+      appTitle: "Stack Game",
+      appDescription: "Stack blocks as high as you can in this addictive mini-game!",
+      buttons: [
+        {
+          label: "Play Now",
+          action: "link",
+          target: `${process.env.NEXT_PUBLIC_URL}`,
+        },
+      ],
+      // Customization
+      customization: {
+        primaryColor: "#7C4DFF",
+        secondaryColor: "#448AFF",
+      },
+    }),
+    {
+      status: 200,
+      headers: {
+        "content-type": "application/json",
+      },
+    }
+  );
+};
