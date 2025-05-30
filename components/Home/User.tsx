@@ -1,5 +1,4 @@
-import { useMiniAppContext } from "@/hooks/use-miniapp-context";
-
+import { useMiniappContext } from '@/hooks/useMiniappContext';
 export function User() {
   const { context } = useMiniAppContext();
 
