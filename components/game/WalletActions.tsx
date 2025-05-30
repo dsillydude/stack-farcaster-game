@@ -2,7 +2,8 @@ import React from 'react';
 import { useAccount, useConnect, useDisconnect, useNetwork, useSwitchNetwork } from 'wagmi';
 import { useWriteContract, useReadContract } from 'wagmi';
 import { parseEther } from 'viem';
-import { useMiniappContext } from '@/hooks/use-miniapp-context';
+import { useMiniappContext } from '@/hooks/useMiniappContext';
+
 
 
 // Mock contract ABI for high score storage
