@@ -1,4 +1,4 @@
-import { useMiniAppContext } from "@/hooks/use-miniapp-context";
+import { useMiniappContext } from '@/hooks/useMiniappContext';
 import { parseEther } from "viem";
 import { monadTestnet } from "viem/chains";
 import {
