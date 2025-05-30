@@ -1,4 +1,4 @@
-import { useMiniAppContext } from "@/hooks/use-miniapp-context";
+import { useMiniappContext } from '@/hooks/useMiniappContext';
 import { APP_URL } from "@/lib/constants";
 
 export function FarcasterActions() {
