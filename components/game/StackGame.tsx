@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useMiniappContext } from '@/hooks/use-miniapp-context';
+import { useMiniappContext } from '@/hooks/useMiniappContext';
+
 
 
 // Game constants
