@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import { useMiniappContext } from '@/hooks/useMiniappContext';
+import { useMiniAppContext } from '@/hooks/useMiniappContext';
 
 
 export default function Home() {
